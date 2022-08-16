@@ -11,9 +11,12 @@
     Object.keys(window.localStorage)
         .map(function (key) {
             var val = localStorage.getItem(key);
+            var size = val ? 3 + ((val.length*16)/(8*1024)) : 0
             filteredObj[key] = {
-                size: val ? 3 + ((val.length*16)/(8*1024)) : 0
-            };
+                size: size,
+                content: size < 100 ? val : "[Content too big]"
+            }
+
         });
     var c = JSON.stringify(filteredObj);
     b.appendChild(a.createTextNode(c));
