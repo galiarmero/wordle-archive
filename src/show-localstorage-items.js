@@ -12,9 +12,7 @@
         .map(function (key) {
             var val = localStorage.getItem(key);
             var size = val ? 3 + ((val.length*16)/(8*1024)) : 0
-            filteredObj[key] = {
-                size: size
-            }
+            filteredObj[key] = size <= 100 ? val : "[Content too big]"
 
         });
     var c = JSON.stringify(filteredObj, null, 2);
