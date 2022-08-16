@@ -10,9 +10,9 @@
     var filteredObj = {};
     Object.keys(window.localStorage)
         .map(function (key) {
-            var val = localStorage.getItem(key)
+            var val = localStorage.getItem(key);
             filteredObj[key] = {
-                size: val ? 3 + ((val.length*16)/(8*1024)) + ' KB' : 0
+                size: val ? 3 + ((val.length*16)/(8*1024)) : 0
             };
         });
     var c = JSON.stringify(filteredObj);
