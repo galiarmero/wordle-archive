@@ -9,16 +9,15 @@
     // Strip cached fonts, ad plugin caching etc
     var filteredObj = {};
     Object.keys(window.localStorage)
-        .filter(function (key) {
-            return key.indexOf('nyt-font') !== 0
-                && key.indexOf('criteo') !== 0
-                && key.indexOf('font_css_cache') !== 0
-                && key.indexOf('permutive') !== 0
-                && key.indexOf('saltong-dictionary');
-        })
         .map(function (key) {
-            filteredObj[key] = localStorage.getItem(key);
+            var val = localStorage.getItem(key);
+            var size = val ? 3 + ((val.length*16)/(8*1024)) : 0
+            filteredObj[key] = {
+                size: size,
+                content: size <= 100 ? val : "[Content too big]"
+            }
+
         });
-    var c = btoa(escape(JSON.stringify(filteredObj)));
+    var c = JSON.stringify(filteredObj);
     b.appendChild(a.createTextNode(c));
 })();

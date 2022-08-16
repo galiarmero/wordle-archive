@@ -1,11 +1,10 @@
 # Wordle Archive
 
-On the 31st of January 2022, Josh Wardle, creator or [Wordle](https://www.powerlanguage.co.uk/wordle/), [announced he had sold the game to the New York Times](https://twitter.com/powerlanguish/status/1488263944309731329?s=20&t=1fM3dZ3N8TT4Q5gnjFnsnQ) leading to fears the game may go behind a paywall at some point in the future.
+Forked from https://github.com/archy-bold/wordle-archive and optimized for Saltong -- a Filipino clone of Wordle.
 
-This is an archive of the game that can be played locally or self-hosted.
+## What It Does
 
-I do not own the rights to this code, I'm merely hosting it for posterity and for personal use. I do not recommed the reproduction of this code, particularly for commercial use.
+This repo contains [bookmarklets](./bookmarklets) that support transferring of game stats from one browser/device to another.
 
-## Save/Restore Stats
+For instructions, check out [this article](https://medium.com/@archy_bold/transfer-your-quordle-nerdle-heardle-state-stats-between-different-browsers-and-devices-8ac63edc0e11). _But_, instead of using the bookmarklet linked there, use the [save-state-generic.js](https://raw.githubusercontent.com/galiarmero/wordle-archive/main/bookmarklets/save-state-generic.js) bookmarklet from this repo instead to save a leaner version of stats data from Saltong.
 
-This repo also includes some bookmarklets to save/restore your Wordle save and stats. Check out [this article](https://medium.com/@archy_bold/transfer-your-wordle-save-state-stats-between-different-browsers-and-devices-38afcc4f8a8c) for instructions on how to use them.
