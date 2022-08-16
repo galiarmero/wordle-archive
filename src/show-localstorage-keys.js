@@ -14,7 +14,7 @@
             var size = val ? 3 + ((val.length*16)/(8*1024)) : 0
             filteredObj[key] = {
                 size: size,
-                content: size < 100 ? val : "[Content too big]"
+                content: size <= 100 ? val : "[Content too big]"
             }
 
         });
